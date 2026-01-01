@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragonWeb | The Aesthetic Browser</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --bg-dark: #050810;
+            --card-glass: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 20px 60px;
+            text-align: center;
+            background: radial-gradient(circle at 50% -20%, #1e293b 0%, #050810 70%);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 100px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 5.5rem);
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -3px;
+            background: linear-gradient(180deg, #fff 0%, #64748b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 650px;
+            margin: 20px auto 40px;
+        }
+
+        .btn-download {
+            background: var(--primary);
+            color: white;
+            padding: 18px 42px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
+        }
+
+        /* Main Preview Image */
+        .main-preview {
+            max-width: 1100px;
+            width: 90%;
+            margin: 80px auto 0;
+            border-radius: 20px;
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+            display: block;
+        }
+
+        /* Content Sections */
+        .container {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 0 20px;
+        }
+
+        .feature-row {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            margin-bottom: 150px;
+        }
+
+        .feature-row.reverse { flex-direction: row-reverse; }
+
+        .feature-text { flex: 1; }
+        .feature-image-container { flex: 1.2; }
+
+        .feature-text h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .feature-text p {
+            font-size: 1.15rem;
+            color: #94a3b8;
+        }
+
+        .feature-img {
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 100px 20px;
+            border-top: 1px solid var(--border-glass);
+            color: #475569;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            .feature-row, .feature-row.reverse { flex-direction: column; text-align: center; gap: 40px; }
+            h1 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="badge">DragonWeb v1.0.1</div>
+        <h1>DragonWeb</h1>
+        <p class="subtitle">Experience the most aesthetic browser ever built. Power, privacy, and beautiful split-screen multitasking.</p>
+        
+        <a href="https://github.com/Milanovv7/DragonWeb-Browser" class="btn-download" target="_blank">
+            <i class="fab fa-github"></i>
+            Download from GitHub
+        </a>
+
+        <img src="homepage.png" alt="DragonWeb Interface" class="main-preview">
+    </section>
+
+    <div class="container">
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2>Aesthetic Themes</h2>
+                <p>Change your accent colors and background wallpapers with a single click. From 'Ocean Blue' to 'Starry Night', DragonWeb looks the way you want it to.</p>
+            </div>
+            <div class="feature-image-container">
+                <img src="themes.png" alt="Themes Settings" class="feature-img">
+            </div>
+        </div>
+
+        <div class="feature-row reverse">
+            <div class="feature-text">
+                <h2>Productive Split Screen</h2>
+                <p>Browse two websites simultaneously in one window. Perfect for research, watching videos while working, or comparing products side-by-side.</p>
+            </div>
+            <div class="feature-image-container">
+                <img src="split-screen.png" alt="Split Screen Mode" class="feature-img">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 DragonWeb Browser. Follow the project on GitHub.</p>
+    </footer>
+
+</body>
+</html>
